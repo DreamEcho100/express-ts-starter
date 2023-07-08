@@ -294,13 +294,14 @@ Install the cross-env package by running the following command in your project d
 npm i -D cross-env
 ```
 
-let's change the the start script on the `package.json`
+let's make some changes to the `start` and `dev` scripts on the `package.json`
 
 old:
 
 ```json
 {
- "start": "ts-node --transpile-only src/server.ts"
+ "start": "ts-node --transpile-only src/server.ts",
+ "dev": "ts-node-dev --loader=ts-node/esm --transpile-only --respawn src/server.ts"
 }
 ```
 
@@ -308,6 +309,7 @@ new:
 
 ```json
 {
- "start": "cross-env NODE_ENV=production ts-node --transpile-only src/server.ts"
+ "start": "cross-env NODE_ENV=production ts-node --transpile-only src/server.ts",
+ "dev": "cross-env NODE_ENV=development ts-node-dev --loader=ts-node/esm --transpile-only --respawn src/server.ts"
 }
 ```
