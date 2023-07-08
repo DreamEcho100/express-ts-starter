@@ -1,4 +1,4 @@
-# Setup a backend project using Express JS, Typescript, Prettier, Eslint and other useful libraries like cors, dotenv, helmet, and zod
+# Setup a backend project using Express JS, Typescript, Prettier, Eslint and other useful libraries like cors, helmet, cross-env, dotenv, and zod
 
 ## Project setup
 
@@ -121,13 +121,11 @@ We will configure and add additional scripts to your `package.json` file to run 
 
 ```jsonc
 {
- // ...
  "main": "dist/server.js",
  "scripts": {
-  "start": "ts-node --loader=ts-node/esm --transpile-only src/server.ts",
+  "start": "ts-node --transpile-only src/server.ts",
   "dev": "ts-node-dev --loader=ts-node/esm --transpile-only --respawn src/server.ts"
- },
- // ...
+ }
 }
 ```
 
@@ -286,4 +284,30 @@ const serverConfig = {
 };
 
 export default serverConfig;
+```
+
+## Installing and using cross-env
+
+Install the cross-env package by running the following command in your project directory:
+
+```bash
+npm i -D cross-env
+```
+
+let's change the the start script on the `package.json`
+
+old:
+
+```json
+{
+ "start": "ts-node --transpile-only src/server.ts"
+}
+```
+
+new:
+
+```json
+{
+ "start": "cross-env NODE_ENV=production ts-node --transpile-only src/server.ts"
+}
 ```
