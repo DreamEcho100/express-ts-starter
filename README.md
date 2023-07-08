@@ -137,9 +137,9 @@ Run your server by executing npm start in your terminal. You should see `"Server
 
 Congratulations! You've set up a Node.js/Express.js project with TypeScript, ts-node, Prettier, and ESLint.
 
-## Useful libraries
+### Useful libraries
 
-## Installing and using cors
+### Installing and using cors
 
 Install the cors package by running the following commands in your project directory:
 
@@ -197,7 +197,7 @@ This sends a GET request to <http://localhost:5000/`api/data`> and retrieves the
 
 > Note that you may need to adjust the CORS configuration based on your specific requirements. For example, you may want to allow requests from multiple origins, or you may want to enable specific HTTP methods or headers. You can find more information about the cors configuration options in [the cors documentation](https://www.npmjs.com/package/cors#configuration-options).
 
-## Installing and using helmet
+### Installing and using helmet
 
 Install the helmet package by running the following command in your project directory:
 
@@ -237,7 +237,7 @@ app.use(
 
 This sets the Referrer-Policy header to same-origin, which only sends the Referer header when navigating to pages on the same origin (i.e. same domain and protocol).
 
-## Installing and using dotenv
+### Installing and using dotenv
 
 Install the dotenv package by running the following command in your project directory:
 
@@ -262,7 +262,7 @@ export default serverConfig;
 
 `config` loads `.env` file contents into `process.env` by default, so we can access them easily
 
-## Installing and using and zod
+### Installing and using and zod
 
 Install the zod package by running the following command in your project directory:
 
@@ -286,7 +286,7 @@ const serverConfig = {
 export default serverConfig;
 ```
 
-## Installing and using cross-env
+### Installing and using cross-env
 
 Install the cross-env package by running the following command in your project directory:
 
